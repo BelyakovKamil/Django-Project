@@ -100,6 +100,7 @@ class QuestionIndexViewTests(TestCase):
         self.assertQuerysetEqual(
             response.context['latest_question_list'],
             [question2, question1],
+<<<<<<< HEAD
         )
 
 class QuestionDetailViewTests(TestCase):
@@ -118,3 +119,6 @@ class QuestionDetailViewTests(TestCase):
         url = reverse('polls:detail', args=(past_question.id,))
         response = self.client.get(url)
         self.assertContains(response, past_question.question_text)
+=======
+        )
+>>>>>>> 622980b8b53bc9694f0ef368ebb9abf0b560d522
